@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "python-secrets-manager"
-version = "0.1.0"
+version = "0.1.1"
 description = "A wrapper around AWS Secrets Manager for pulling secrets from AWS and getting them as python variables, pivoting on stage"
 license = "MIT"
 readme = "README.md"
