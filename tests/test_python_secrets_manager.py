@@ -15,10 +15,10 @@ def test_yml_to_dict():
 
 @mock_secretsmanager
 def test_get_secrets():
-    client = boto3.client("secretsmanager")
+    client = boto3.client("secretsmanager", region_name="us-west-2")
     client.create_secret(
         Name="secret-name",
         SecretString=json.dumps({"KEY1": "hello", "KEY2": "world"}),
     )
-    secrets = get_secrets("test")
+    secrets = get_secrets("test", region_name="us-west-2")
     assert secrets == {"KEY1": "hello", "KEY2": "world"}
