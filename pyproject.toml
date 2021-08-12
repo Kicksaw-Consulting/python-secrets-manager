@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "python-secrets-manager"
+version = "0.1.0"
+description = "A wrapper around AWS Secrets Manager for pulling secrets from AWS and getting them as python variables, pivoting on stage"
+license = "MIT"
+readme = "README.md"
+authors = ["Alex Drozd <drozdster@gmail.com>"]
+keywords = ["python", "aws", "secrets manager"]
+packages = [
+    { include = "python_secrets_manager" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+boto3 = "^1.18.19"
+PyYAML = "^5.4.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+black = "^21.7b0"
+moto = "^2.2.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
